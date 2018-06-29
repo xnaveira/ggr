@@ -34,7 +34,6 @@ export default {
           if (this.res == eval(operation)) {
             this.text = "😎"
           } else {
-            //this.text = "😰 " + this.opA + " " + this.Op + " " " + this.opB + " = " + eval(operation)
             this.text = `😰 ${this.opA} ${this.op} ${this.opB} = ${eval(operation)}`
           }
           this.initOp()
