@@ -1,9 +1,9 @@
 <template>
   <div> 
-    <div><h1>{{ opA }} <span v-on:click="switchOp">{{ this.op }}</span> {{ opB }} = <input maxlength="2" size="2" type="text" v-model="res" v-on:change="handleResult"></h1></div>
+    <div><h1>{{ opA }} <span v-on:click="switchOp">{{ this.op }}</span> {{ opB }} = <input minlength="0" maxlength="2" size="2" type="tel" v-model="res" v-on:change="handleResult" pattern="[0-9]*"></h1></div>
     <div><h1>{{ text }}</h1></div>
     <br>
-  <div id="foot">Made with ❤️ by Xavier&Elvira 2018<br>v1.0.3</div>
+  <div id="foot">Made with ❤️ by Xavier&Elvira 2018<br>v1.0.5</div>
   </div>
 </template>
 <script>
@@ -55,7 +55,7 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
-input[type=text] {
+input[type=tel] {
   color: red;
   vertical-align: 0%;
   font-size: 30px;
