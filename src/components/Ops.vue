@@ -3,7 +3,7 @@
     <div><h1>{{ opA }} <span v-on:click="switchOp">{{ this.op }}</span> {{ opB }} = <input maxlength="2" size="2" type="text" v-model="res" v-on:change="handleResult"></h1></div>
     <div><h1>{{ text }}</h1></div>
     <br>
-  <div id="foot">Made with ❤️ by Xavier&Elvira 2018<br>v1.0.2</div>
+  <div id="foot">Made with ❤️ by Xavier&Elvira 2018<br>v1.0.3</div>
   </div>
 </template>
 <script>
@@ -34,13 +34,14 @@ export default {
           if (this.res == eval(operation)) {
             this.text = "😎"
           } else {
-            this.text = "😰"
+            //this.text = "😰 " + this.opA + " " + this.Op + " " " + this.opB + " = " + eval(operation)
+            this.text = `😰 ${this.opA} ${this.op} ${this.opB} = ${eval(operation)}`
           }
           this.initOp()
           this.res = ""
       },
       getRandomInt(max) {
-        return Math.floor(Math.random() * Math.floor(max));
+        return Math.random() * max + 1 | 0
       },
       initOp() {
         this.opA = this.getRandomInt(9)
