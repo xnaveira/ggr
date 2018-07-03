@@ -2,7 +2,7 @@
 
 APP := ggr
 DOCKER_IMAGE := xnaveira/$(APP)
-VERSION := 1.0.5
+VERSION := 1.0.7
 
 build:
 	docker build --no-cache -t $(DOCKER_IMAGE):$(VERSION) .
