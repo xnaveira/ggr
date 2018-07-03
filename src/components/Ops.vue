@@ -10,8 +10,10 @@
         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
       </form>
+      ETH: 0xf201C2fe2bE78fA7a41EE283d64931254a41838b
       <br>
-      Made with ❤️ by Xavier&Elvira 2018<br> v1.0.6
+      <br>
+      Made with ❤️ by Xavier&Elvira 2018<br> v1.0.7
     </div>
   </div>
 </template>
