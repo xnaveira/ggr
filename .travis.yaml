@@ -1,0 +1,22 @@
+sudo: required
+services:
+  - docker
+env:
+  global:
+    - IMAGE_NAME=xnaveira/ggr
+    - REGISTRY_USER=xnaveira
+
+before_script:
+  - version="$(awk '$1 == "VERSION" { print $3; exit }' Makefile)"
+script:
+  - make image
+after_script:
+  - docker images
+before_deploy:
+  - docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+  - make push
+deploy:
+  provider: script
+  script: echo "Here be Dragons"
+  on:
+branch: testing
