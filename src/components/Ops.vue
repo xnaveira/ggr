@@ -3,7 +3,16 @@
     <div><h1>{{ opA }} <span v-on:click="switchOp">{{ this.op }}</span> {{ opB }} = <input minlength="0" maxlength="2" size="2" type="tel" v-model="res" v-on:change="handleResult" pattern="[0-9]*"></h1></div>
     <div><h1>{{ text }}</h1></div>
     <br>
-  <div id="foot">Made with ❤️ by Xavier&Elvira 2018<br>v1.0.5</div>
+    <div id="foot">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="9MLGVEMZHPUHQ">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+      <br>
+      Made with ❤️ by Xavier&Elvira 2018<br> v1.0.6
+    </div>
   </div>
 </template>
 <script>
